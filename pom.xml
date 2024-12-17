@@ -1,7 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	    <groupId>com.example</groupId> <!-- Fügen Sie Ihre groupId hinzu -->
+    <artifactId>temp_project_name</artifactId>
+    <version>1.0.0</version> <!-- Fügen Sie eine Version hinzu -->
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>temp_project_name</artifactId>
 	<build>
 		<plugins>
 			<plugin>
@@ -58,11 +61,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.surefire</groupId>
-						<artifactId>surefire-junit47</artifactId>
-						<version>${plugin.surefire.version}</version>
-					</dependency>
+
 				</dependencies>
 			</plugin>
 			<plugin>
@@ -70,6 +69,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<configuration>
 					<targetJdk>1.8</targetJdk>
+					
 				</configuration>
 			</plugin>
 			<plugin>
@@ -83,11 +83,6 @@
 		</plugins>
 	</build>
 
-	<parent>
-		<groupId>temp_group_id</groupId>
-		<artifactId>temp_artifact_id</artifactId>
-		<version>temp_version</version>
-	</parent>
 	
 	<distributionManagement>
 		<repository>
